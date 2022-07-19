@@ -1,5 +1,7 @@
+import ScreenPrincipal from "./ScreenPrincipal";
+
 export default function App(){
     return (
-        <h1>Confiaaaaaaaa</h1>
+        <ScreenPrincipal />
     )
 };

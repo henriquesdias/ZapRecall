@@ -6,7 +6,7 @@ export default function Flashcard({position, icon, question}){
             {turn ? (
             <div className="flashcard" onClick={ () => setTurn(!turn)}>
                 <span>Pergunta {position}</span>
-                {icon}
+                <ion-icon name={icon}></ion-icon>
             </div>
             ) : (
                 <div className="question">

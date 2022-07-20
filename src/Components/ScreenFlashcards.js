@@ -42,17 +42,22 @@ function Top(){
         </div>
     );
 }
+function randomize(){
+    return Math.random() - 0.5;
+}
 export default function Flashcards(){
+    const deck = [...flashcards];
+    deck.sort(randomize);
     return (
         <>
             <Top/>
             <div>
-                {flashcards.map( (element,index) => 
+                {deck.map( (element,index) => 
                     (
                         <Flashcard 
                         key={index}
                         position={index + 1}
-                        icon={<ion-icon name="play-outline"></ion-icon>}
+                        icon={"play-outline"}
                         question={element.question} />
                     )
                 )}

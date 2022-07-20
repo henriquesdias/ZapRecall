@@ -41,3 +41,14 @@ body{
     align-items: center;
     font-family: 'Recursive', sans-serif;
 }
+.top{
+    display: flex;
+    align-items: center;
+    font-family: 'Righteous', cursive;
+    color: white;
+    font-size: 36px;
+}
+.top > img{
+    height: 60px;
+    margin-right: 10px;
+}

@@ -1,6 +1,7 @@
 import React from "react";
-export default function Flashcard({position, icon, question}){
+export default function Flashcard({position, icon, question, answer}){
     const [turn, setTurn] = React.useState(true);
+    const [side, setSide] = React.useState(question);
     return (
         <>
             {turn ? (
@@ -10,8 +11,9 @@ export default function Flashcard({position, icon, question}){
             </div>
             ) : (
                 <div className="question">
-                    <p>{question}</p>
-                    <img src="./assets/images/setinha.png" alt="turn" />
+                    <p>{side}</p>
+                    <img src="./assets/images/setinha.png" alt="turn" 
+                    onClick={ () => setSide(answer)} />
                 </div>
             )}
         </>

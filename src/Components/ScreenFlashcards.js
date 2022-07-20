@@ -58,7 +58,8 @@ export default function Flashcards(){
                         key={index}
                         position={index + 1}
                         icon={"play-outline"}
-                        question={element.question} />
+                        question={element.question}
+                        answer={element.answer} />
                     )
                 )}
             </div>

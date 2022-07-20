@@ -1,4 +1,5 @@
 import Flashcard from "./Flashcard";
+import Footer from "./Footer";
 const flashcards = [
     {
         question: 'O que é JXS ?',
@@ -45,11 +46,18 @@ export default function Flashcards(){
     return (
         <>
             <Top/>
-            {flashcards.map( (element,index) => {
-                return (
-                    <Flashcard position={index + 1}/>
-                )
-            } )}
+            <div>
+                {flashcards.map( (element,index) => 
+                    (
+                        <Flashcard 
+                        key={index}
+                        position={index + 1}
+                        icon={<ion-icon name="play-outline"></ion-icon>}
+                        question={element.question} />
+                    )
+                )}
+            </div>
+            <Footer valueInicial="0" numberOfQuestions={flashcards.length}/>
         </>
         
     );

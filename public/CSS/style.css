@@ -108,10 +108,13 @@ footer{
     border-radius: 5px;
     font-size: 18px;
     font-family: 'Recursive', sans-serif;
-    padding: 20px;
+    padding: 13px 13px 4px 13px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     margin: 12.5px 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .question img{
     height: 20px;
@@ -121,4 +124,28 @@ footer{
 }
 .question:last-child{
     margin: 12.5px 0 90px 0;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 12px;
+}
+.options div{
+    border-radius: 5px;
+    height: 38px;
+    width: 86px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.red-option{
+    background-color: #F04732;
+}
+.orange-option{
+    background-color: #F69131;
+}
+.green-option{
+    background-color: #61BF37;
 }

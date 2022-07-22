@@ -3,13 +3,17 @@ import Question from "./Question";
 export default function Flashcard({position, question, answer}){
     const [turn, setTurn] = React.useState(true);
     const [side, setSide] = React.useState(question);
-    const [classQuestion , setClassQuestion] = React.useState('');
-    const [showOptions, setShowOptions] = React.useState(false);
     const [icon, setIcon] = React.useState("play-outline");
+    const [showOptions, setShowOptions] = React.useState(false);
+    const [classQuestion , setClassQuestion] = React.useState('');
     return (
         <>
             {turn ? (
-            <div className="flashcard" onClick={ () => setTurn(!turn)}>
+            <div className="flashcard" onClick={ () =>{
+                if (icon === "play-outline") {
+                    setTurn(!turn)
+                }
+            }}>
                 <span className={classQuestion}>Pergunta {position}</span>
                 <ion-icon name={icon}></ion-icon>
             </div>

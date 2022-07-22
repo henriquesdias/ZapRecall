@@ -75,12 +75,15 @@ ion-icon[name="play-outline"]{
 }
 ion-icon[name="close-circle"]{
     color: red;
+    font-size: 25px;
 }
 ion-icon[name="checkmark-circle"]{
     color: #61BF37;
+    font-size: 25px;
 }
 ion-icon[name="help-circle"]{
     color: #F69131;
+    font-size: 25px;
 }
 footer{
     position: fixed;
@@ -148,4 +151,16 @@ footer{
 }
 .green-option{
     background-color: #61BF37;
+}
+.line{
+    text-decoration: line-through;
+}
+.red{
+    color: #F04732;
+}
+.orange{
+    color: #F69131;
+}
+.green{
+    color: #61BF37;
 }

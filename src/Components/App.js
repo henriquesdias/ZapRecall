@@ -1,5 +1,7 @@
 import React from "react";
 import Flashcards from "./ScreenFlashcards";
+import "./CSS/reset.css"
+import "./CSS/style.css"
 export default function App(){
     const [screen , setScreen] = React.useState(true);
     return (

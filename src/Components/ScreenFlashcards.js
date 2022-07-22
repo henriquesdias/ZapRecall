@@ -57,7 +57,6 @@ export default function Flashcards(){
                         <Flashcard 
                         key={index}
                         position={index + 1}
-                        icon={"play-outline"}
                         question={element.question}
                         answer={element.answer} />
                     )

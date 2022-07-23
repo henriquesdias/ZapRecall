@@ -6,6 +6,11 @@ export default function Footer({valueInicial, numberOfQuestions,iconsFooter}){
     let emoticonResult = "./assets/images/party.png"
     let text = "Parabéns!"
     const failed = iconsFooter.indexOf("close-circle") !== -1;
+    if (failed) {
+        emoticonResult = "./assets/images/sad.png"
+        textResult = "Ainda falta alguns... Mas não desanime!"
+        text = "Putz..."
+    } 
     return (
         <footer>
             {(valueInicial === numberOfQuestions) ? 

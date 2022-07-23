@@ -1,6 +1,6 @@
 import React from "react";
 import Question from "./Question";
-export default function Flashcard({position, question, answer}){
+export default function Flashcard({position, question, answer,valueInicial,setValueInicial}){
     const [turn, setTurn] = React.useState(true);
     const [side, setSide] = React.useState(question);
     const [icon, setIcon] = React.useState("play-outline");
@@ -27,7 +27,9 @@ export default function Flashcard({position, question, answer}){
                 turn={turn}
                 setTurn={setTurn}
                 setClassQuestion={setClassQuestion}
-                setIcon={setIcon}/>
+                setIcon={setIcon}
+                valueInicial={valueInicial}
+                setValueInicial={setValueInicial}/>
             )}
         </>
     );

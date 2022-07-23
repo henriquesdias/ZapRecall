@@ -1,10 +1,11 @@
-function Options({setTurn,setClassQuestion,setIcon}){
+function Options({setTurn,setClassQuestion,setIcon,valueInicial,setValueInicial}){
     return (
     <div className="options">
         <div className="red-option"  onClick={ () => {
             setTurn(true);
             setClassQuestion('red line');
             setIcon('close-circle');
+            setValueInicial(valueInicial + 1);
             }}>
             Não lembrei
         </div>
@@ -12,6 +13,7 @@ function Options({setTurn,setClassQuestion,setIcon}){
             setTurn(true)
             setClassQuestion('orange line');
             setIcon('help-circle');
+            setValueInicial(valueInicial + 1);
             }}>
             Quase não lembrei
         </div>
@@ -19,6 +21,7 @@ function Options({setTurn,setClassQuestion,setIcon}){
         setTurn(true);
         setClassQuestion('green line');
         setIcon('checkmark-circle');
+        setValueInicial(valueInicial + 1);
         }}>
             Zap!
         </div>
@@ -26,7 +29,8 @@ function Options({setTurn,setClassQuestion,setIcon}){
     );
 }
 export default function Question({
-    side, answer,setSide, showOptions,setShowOptions,setTurn,setClassQuestion,setIcon}
+    side, answer,setSide, showOptions,setShowOptions
+    ,setTurn,setClassQuestion,setIcon,valueInicial,setValueInicial}
     ){
     return (
     <div className="question">
@@ -39,7 +43,10 @@ export default function Question({
         ): (
             <Options setTurn={setTurn}
             setClassQuestion={setClassQuestion}
-            setIcon={setIcon}/>
+            setIcon={setIcon}
+            valueInicial={valueInicial}
+            setValueInicial={setValueInicial}
+            />
         )} 
     </div>        
     );

@@ -1,3 +1,4 @@
+import React from "react";
 import Flashcard from "./Flashcard";
 import Footer from "./Footer";
 const flashcards = [
@@ -47,6 +48,7 @@ function randomize(){
 }
 export default function Flashcards(){
     const deck = [...flashcards];
+    const [valueInicial , setValueInicial] = React.useState(0);
     deck.sort(randomize);
     return (
         <>
@@ -58,11 +60,13 @@ export default function Flashcards(){
                         key={index}
                         position={index + 1}
                         question={element.question}
-                        answer={element.answer} />
+                        answer={element.answer}
+                        setValueInicial={setValueInicial}
+                        valueInicial={valueInicial} />
                     )
                 )}
             </div>
-            <Footer valueInicial="0" numberOfQuestions={flashcards.length}/>
+            <Footer valueInicial={valueInicial} numberOfQuestions={flashcards.length}/>
         </>
         
     );

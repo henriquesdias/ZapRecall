@@ -90,7 +90,7 @@ footer{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    min-height: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,7 +98,23 @@ footer{
     color: #333333;
     background-color: white;
     font-family: 'Recursive', sans-serif;
+    font-size: 18px;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 10px;
+}
+footer > p{
+    width: 222px;
+    margin: 14px 0;
+}
+footer > div{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+footer img{
+    margin-right: 12px;
 }
 .flashcard:last-child{
     margin: 12.5px 0 90px 0;

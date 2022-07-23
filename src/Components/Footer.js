@@ -31,7 +31,3 @@ export default function Footer({valueInicial, numberOfQuestions,iconsFooter}){
         </footer>
     );
 }
-
-          {/* <ion-icon name="close-circle"></ion-icon>
-                <ion-icon name="checkmark-circle"></ion-icon>
-                <ion-icon name="help-circle"></ion-icon> */}

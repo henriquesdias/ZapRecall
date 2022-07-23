@@ -49,6 +49,7 @@ function randomize(){
 export default function Flashcards(){
     const deck = [...flashcards];
     const [valueInicial , setValueInicial] = React.useState(0);
+    const [iconsFooter, setIconsFooter] = React.useState([]);
     deck.sort(randomize);
     return (
         <>
@@ -62,11 +63,17 @@ export default function Flashcards(){
                         question={element.question}
                         answer={element.answer}
                         setValueInicial={setValueInicial}
-                        valueInicial={valueInicial} />
+                        valueInicial={valueInicial}
+                        iconsFooter={iconsFooter}
+                        setIconsFooter={setIconsFooter} />
                     )
                 )}
             </div>
-            <Footer valueInicial={valueInicial} numberOfQuestions={flashcards.length}/>
+            <Footer 
+            valueInicial={valueInicial} 
+            numberOfQuestions={flashcards.length}
+            iconsFooter={iconsFooter}
+            />
         </>
         
     );

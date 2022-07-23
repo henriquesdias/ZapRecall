@@ -1,4 +1,4 @@
-function Options({setTurn,setClassQuestion,setIcon,valueInicial,setValueInicial}){
+function Options({setTurn,setClassQuestion,setIcon,valueInicial,setValueInicial,iconsFooter,setIconsFooter}){
     return (
     <div className="options">
         <div className="red-option"  onClick={ () => {
@@ -6,6 +6,7 @@ function Options({setTurn,setClassQuestion,setIcon,valueInicial,setValueInicial}
             setClassQuestion('red line');
             setIcon('close-circle');
             setValueInicial(valueInicial + 1);
+            setIconsFooter([...iconsFooter,"close-circle"]);
             }}>
             Não lembrei
         </div>
@@ -14,6 +15,7 @@ function Options({setTurn,setClassQuestion,setIcon,valueInicial,setValueInicial}
             setClassQuestion('orange line');
             setIcon('help-circle');
             setValueInicial(valueInicial + 1);
+            setIconsFooter([...iconsFooter,"help-circle"]);
             }}>
             Quase não lembrei
         </div>
@@ -22,6 +24,7 @@ function Options({setTurn,setClassQuestion,setIcon,valueInicial,setValueInicial}
         setClassQuestion('green line');
         setIcon('checkmark-circle');
         setValueInicial(valueInicial + 1);
+        setIconsFooter([...iconsFooter,"checkmark-circle"]);
         }}>
             Zap!
         </div>
@@ -30,7 +33,7 @@ function Options({setTurn,setClassQuestion,setIcon,valueInicial,setValueInicial}
 }
 export default function Question({
     side, answer,setSide, showOptions,setShowOptions
-    ,setTurn,setClassQuestion,setIcon,valueInicial,setValueInicial}
+    ,setTurn,setClassQuestion,setIcon,valueInicial,setValueInicial,iconsFooter,setIconsFooter}
     ){
     return (
     <div className="question">
@@ -46,7 +49,8 @@ export default function Question({
             setIcon={setIcon}
             valueInicial={valueInicial}
             setValueInicial={setValueInicial}
-            />
+            iconsFooter={iconsFooter}
+            setIconsFooter={setIconsFooter}/>
         )} 
     </div>        
     );

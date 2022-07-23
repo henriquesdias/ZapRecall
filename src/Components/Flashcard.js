@@ -6,15 +6,16 @@ export default function Flashcard({position, question, answer,valueInicial,setVa
     const [icon, setIcon] = React.useState("play-outline");
     const [showOptions, setShowOptions] = React.useState(false);
     const [classQuestion , setClassQuestion] = React.useState('');
+    function showQuestion(){
+        if (icon === "play-outline") {
+            setTurn(!turn)
+        }  
+    }
     return (
         <>
             {turn ? (
-            <div className="flashcard" onClick={ () =>{
-                if (icon === "play-outline") {
-                    setTurn(!turn)
-                }
-            }}>
-            <span className={classQuestion}>Pergunta {position}</span>
+            <div className="flashcard" onClick={showQuestion} >
+                <span className={classQuestion}>Pergunta {position}</span>
                 <ion-icon name={icon}></ion-icon>
             </div>
             ) : (

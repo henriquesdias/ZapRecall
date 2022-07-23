@@ -3,12 +3,12 @@ import Flashcard from "./Flashcard";
 import Footer from "./Footer";
 const flashcards = [
     {
-        question: 'O que é JXS ?',
+        question: 'O que é JSX ?',
         answer: 'Uma extensão de linguagem do JavaScript'
     },
     {
         question: 'O React é ...',
-        answer: 'Uma biblioteca javaScript para construção de interfaces'    
+        answer: 'uma biblioteca javaScript para construção de interfaces'    
     },
     {
         question: 'Componentes devem iniciar com...',
@@ -46,11 +46,10 @@ function Top(){
 function randomize(){
     return Math.random() - 0.5;
 }
+const deck = flashcards.sort(randomize);
 export default function Flashcards(){
-    const deck = [...flashcards];
-    const [valueInicial , setValueInicial] = React.useState(0);
     const [iconsFooter, setIconsFooter] = React.useState([]);
-    deck.sort(randomize);
+    const [valueInicial , setValueInicial] = React.useState(0);
     return (
         <>
             <Top/>
@@ -59,9 +58,9 @@ export default function Flashcards(){
                     (
                         <Flashcard 
                         key={index}
-                        position={index + 1}
                         question={element.question}
                         answer={element.answer}
+                        position={index + 1}
                         setValueInicial={setValueInicial}
                         valueInicial={valueInicial}
                         iconsFooter={iconsFooter}

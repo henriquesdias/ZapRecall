@@ -1,5 +1,52 @@
 import arrow from "./assets/images/setinha.png";
-
+const options = [
+  {
+    className: "red-option",
+    color: "red line",
+    icon: "close-circle",
+    text: "Não lembrei",
+  },
+  {
+    className: "orange-option",
+    color: "orange line",
+    icon: "help-circle",
+    text: "Quase não lembrei",
+  },
+  {
+    className: "green-option",
+    color: "green line",
+    icon: "checkmark-circle",
+    text: "Zap!",
+  },
+];
+function Option({
+  className,
+  color,
+  icon,
+  text,
+  setTurn,
+  setClassQuestion,
+  setIcon,
+  setValueInicial,
+  setIconsFooter,
+  valueInicial,
+  iconsFooter
+}) {
+  return (
+    <div
+      className={className}
+      onClick={() => {
+        setTurn(true);
+        setClassQuestion(color);
+        setIcon(icon);
+        setValueInicial(valueInicial + 1);
+        setIconsFooter([...iconsFooter, icon]);
+      }}
+    >
+      {text}
+    </div>
+  );
+}
 function Options({
   setTurn,
   setClassQuestion,
@@ -11,42 +58,21 @@ function Options({
 }) {
   return (
     <div className="options">
-      <div
-        className="red-option"
-        onClick={() => {
-          setTurn(true);
-          setClassQuestion("red line");
-          setIcon("close-circle");
-          setValueInicial(valueInicial + 1);
-          setIconsFooter([...iconsFooter, "close-circle"]);
-        }}
-      >
-        Não lembrei
-      </div>
-      <div
-        className="orange-option"
-        onClick={() => {
-          setTurn(true);
-          setClassQuestion("orange line");
-          setIcon("help-circle");
-          setValueInicial(valueInicial + 1);
-          setIconsFooter([...iconsFooter, "help-circle"]);
-        }}
-      >
-        Quase não lembrei
-      </div>
-      <div
-        className="green-option"
-        onClick={() => {
-          setTurn(true);
-          setClassQuestion("green line");
-          setIcon("checkmark-circle");
-          setValueInicial(valueInicial + 1);
-          setIconsFooter([...iconsFooter, "checkmark-circle"]);
-        }}
-      >
-        Zap!
-      </div>
+      {options.map( (element,index) => (
+      <Option 
+      className={element.className}
+      color={element.color}
+      icon={element.icon}
+      text={element.text}
+      setTurn={setTurn}
+      setClassQuestion={setClassQuestion}
+      setIcon={setIcon}
+      setValueInicial={setValueInicial}
+      setIconsFooter={setIconsFooter}
+      valueInicial={valueInicial}
+      iconsFooter={iconsFooter}
+      key={index} />
+      ))}
     </div>
   );
 }

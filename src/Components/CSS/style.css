@@ -69,6 +69,7 @@ body{
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     font-weight: bold;
     margin: 12.5px 0;
+    cursor: pointer;
 }
 ion-icon[name="play-outline"]{
     font-size: 35px;
@@ -140,6 +141,7 @@ footer img{
     position: absolute;
     bottom: 10px;
     right: 25px;
+    cursor: pointer;
 }
 .question:last-child{
     margin: 12.5px 0 90px 0;
@@ -158,6 +160,7 @@ footer img{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .red-option{
     background-color: #F04732;

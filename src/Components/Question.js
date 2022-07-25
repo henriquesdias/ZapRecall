@@ -1,3 +1,5 @@
+import arrow from "./assets/images/setinha.png";
+
 function Options({
   setTurn,
   setClassQuestion,
@@ -9,7 +11,8 @@ function Options({
 }) {
   return (
     <div className="options">
-      <div className="red-option"
+      <div
+        className="red-option"
         onClick={() => {
           setTurn(true);
           setClassQuestion("red line");
@@ -20,7 +23,8 @@ function Options({
       >
         Não lembrei
       </div>
-      <div className="orange-option"
+      <div
+        className="orange-option"
         onClick={() => {
           setTurn(true);
           setClassQuestion("orange line");
@@ -31,7 +35,8 @@ function Options({
       >
         Quase não lembrei
       </div>
-      <div className="green-option"
+      <div
+        className="green-option"
         onClick={() => {
           setTurn(true);
           setClassQuestion("green line");
@@ -64,7 +69,7 @@ export default function Question({
       <p>{side}</p>
       {!showOptions ? (
         <img
-          src="./assets/images/setinha.png"
+          src={arrow}
           alt="turn"
           onClick={() => {
             setSide(answer);

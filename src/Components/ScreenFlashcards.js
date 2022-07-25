@@ -1,11 +1,12 @@
 import React from "react";
 import Flashcard from "./Flashcard";
 import Footer from "./Footer";
+import logoSmaller from "./assets/images/logo-pequeno.png";
 import flashcards from "./Data.js"
 function Top() {
   return (
     <div className="top">
-      <img src="./assets/images/logo-pequeno.png" alt="zap recall" />
+      <img src={logoSmaller} alt="zap recall" />
       <span>ZapRecall</span>
     </div>
   );

@@ -1,3 +1,5 @@
+import happy from "./assets/images/party.png";
+import sad from "./assets/images/sad.png";
 function Icon({ name }) {
   return <ion-icon name={name}></ion-icon>;
 }
@@ -7,11 +9,11 @@ export default function Footer({
   iconsFooter,
 }) {
   let textResult = "Você não esqueceu de nenhum flashcard!";
-  let emoticonResult = "./assets/images/party.png";
+  let emoticonResult = happy;
   let text = "Parabéns!";
   const failed = iconsFooter.indexOf("close-circle") !== -1;
   if (failed) {
-    emoticonResult = "./assets/images/sad.png";
+    emoticonResult = sad;
     textResult = "Ainda falta alguns... Mas não desanime!";
     text = "Putz...";
   }
